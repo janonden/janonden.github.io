@@ -1,0 +1,86 @@
+baseURL = "https://blog.janonden.tk/"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+title = "Janon Blog"
+
+theme = "LoveIt"
+
+[params]
+  version = "0.2.X"
+  description = "用自己的努力去拼别人的聪明"
+  dateFormat = "2006-01-02"
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      avatarURL = "/images/avatar.png"
+      subtitle = "用自己的努力去拼别人的聪明"
+      typeit = true
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 6
+  [params.footer]
+    enable = true
+    custom = ''
+    hugo = true
+    copyright = true
+    author = false
+    since = 2018
+  [params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+  [params.list]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+  [params.page]
+    fontawesome = true
+    linkToMarkdown = true
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+[author]
+  name = "Janon"
+  email = ""
+  link = ""
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
